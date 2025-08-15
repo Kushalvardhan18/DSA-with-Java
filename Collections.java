@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Collections {
     public static void main(String[] args){
-
+/*
         ArrayList<Integer>  list = new ArrayList<>();
 //        List<Integer> list = new ArrayList<>();
 
@@ -48,5 +48,20 @@ public class Collections {
         System.out.println("peek = "+ s.peek());
         s.pop();
         System.out.println(s);
+
+        */
+
+
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(10);
+        q.offer(60);
+        q.offer(80);
+        q.offer(90);
+        q.add(45);
+        System.out.println(q);
+        System.out.println(q.peek());
+        System.out.println(q.poll());
+        System.out.println(q.remove());
+
     }
 }
