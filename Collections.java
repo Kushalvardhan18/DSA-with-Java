@@ -36,5 +36,17 @@ public class Collections {
         a.add(30);
         a.add(2,40);
         System.out.println(a);
+
+
+        Stack <Integer> s = new Stack<>();
+
+        s.push(1);
+        s.push(20);
+        s.push(56);
+        s.push(40);
+        System.out.println(s);
+        System.out.println("peek = "+ s.peek());
+        s.pop();
+        System.out.println(s);
     }
 }
