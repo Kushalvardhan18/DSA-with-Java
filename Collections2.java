@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 class Employee {
@@ -52,5 +53,14 @@ public class Collections2 {
         hs.add(e2);
 
         System.out.println(hs);
+
+
+
+        int arr []= {23,42,10,5,24};
+
+        System.out.println(Arrays.toString(arr));
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+
     }
 }
