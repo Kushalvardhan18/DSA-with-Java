@@ -1,5 +1,6 @@
 import java.lang.reflect.Array;
 import java.util.*;
+import java.util.Collections;
 
 class Employee {
     public int id;
@@ -62,5 +63,14 @@ public class Collections2 {
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
 
+        ArrayList<Integer> newArr = new ArrayList<>();
+        newArr.add(25);
+        newArr.add(15);
+        newArr.add(55);
+        newArr.add(10);
+
+        System.out.println(newArr);
+        Collections.sort(newArr);
+        System.out.println(newArr);
     }
 }
