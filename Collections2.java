@@ -2,7 +2,14 @@ import java.lang.reflect.Array;
 import java.util.*;
 import java.util.Collections;
 
-class Employee {
+class IdComparision implements Comparator<Employee>{
+
+    @Override
+    public int compare(Employee o1, Employee o2) {
+      return o1.id- o2.id;
+    }
+}
+class Employee implements Comparable <Employee> {
     public int id;
     public String name;
 
@@ -32,6 +39,11 @@ class Employee {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.id - o.id;
+    }
 }
 
 public class Collections2 {
@@ -43,7 +55,7 @@ public class Collections2 {
         System.out.println(c==d);
 
 
-        Employee e1 = new Employee(1, "aman");
+        Employee e1 = new Employee(2, "aman");
         Employee e2 = new Employee(1, "kushal");
         System.out.println(e1 == e2);
         System.out.println(e1.equals(e2));
@@ -80,5 +92,17 @@ public class Collections2 {
 
         Collections.fill(newArr,0);
         System.out.println(newArr);
+
+
+        ArrayList<Employee> e = new ArrayList<>();
+        e.add(e1);
+        e.add(e2);
+        System.out.println(e);
+
+//        Collections.sort(e);
+
+        // Using Comparator
+        Collections.sort(e,new IdComparision());
+        System.out.println(e);
     }
 }
