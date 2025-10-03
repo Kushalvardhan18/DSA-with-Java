@@ -72,5 +72,13 @@ public class Collections2 {
         System.out.println(newArr);
         Collections.sort(newArr);
         System.out.println(newArr);
+
+        System.out.println("minimum "+ Collections.min(newArr));
+
+        Collections.sort(newArr,Collections.reverseOrder());
+        System.out.println("Reverse"+ newArr);
+
+        Collections.fill(newArr,0);
+        System.out.println(newArr);
     }
 }
