@@ -19,7 +19,7 @@ class Employee {
 
     @Override
     public int hashCode() {
-        return id;
+        return id + name.hashCode();
     }
 
 
@@ -42,7 +42,7 @@ public class Collections2 {
 
 
         Employee e1 = new Employee(1, "aman");
-        Employee e2 = new Employee(1, "aman");
+        Employee e2 = new Employee(1, "kushal");
         System.out.println(e1 == e2);
         System.out.println(e1.equals(e2));
 
