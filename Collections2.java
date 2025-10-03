@@ -17,7 +17,19 @@ class Employee {
         return id == employee.id && Objects.equals(name, employee.name);
     }
 
+    @Override
+    public int hashCode() {
+        return id;
+    }
 
+
+    @Override
+    public String toString() {
+        return "{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
 
 public class Collections2 {
@@ -33,5 +45,12 @@ public class Collections2 {
         Employee e2 = new Employee(1, "aman");
         System.out.println(e1 == e2);
         System.out.println(e1.equals(e2));
+
+
+        HashSet<Employee> hs = new HashSet<>();
+        hs.add(e1);
+        hs.add(e2);
+
+        System.out.println(hs);
     }
 }
